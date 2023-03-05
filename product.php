@@ -4,8 +4,7 @@ include('connect.php');
 
 $id=$_POST['id'];
 
-
-$query = $conn->prepare('select id, name, description, price, category, image_url from products where id=?');
+$query = $conn->prepare('SELECT * FROM products WHERE id=?');
 $query->bind_param('i', $id);
 $query->execute();
 $query->store_result();
