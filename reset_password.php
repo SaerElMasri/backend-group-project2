@@ -13,9 +13,9 @@ $response = [];
 if(!empty($row)){
     $hashedPassword = PASSWORD_HASH($new_password, PASSWORD_BCRYPT);
     $sql = "UPDATE users set password=? WHERE email=?";
-    $statement = $conn->prepare($sql);
-    $statement->bind_param('ss', $hashedPassword, $email);
-    $statement->execute();
+    $query = $conn->prepare($sql);
+    $query->bind_param('ss', $hashedPassword, $email);
+    $query->execute();
     $response['status'] = "Password Changed";
 } else{
     $response['status'] = "Email does not exist";
