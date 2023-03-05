@@ -2,7 +2,7 @@
 
 include('connect.php');
 
-$id=$_GET['id'];
+$id=$_POST['id'];
 
 
 $query = $conn->prepare('select id, name, description, price, category, image_url from products where id=?');
