@@ -1,6 +1,7 @@
 <?php
 include('connect.php');
 
+header('Access-Control-Allow-Origin:*');
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['email'];
