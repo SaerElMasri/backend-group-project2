@@ -25,11 +25,8 @@ if ($num_rows == 0) {
     $response['description'] = $description;
     $response['category'] = $category;
     $response['image_url'] = $image_url;
-        
-    
-    
+            
 }
-
 echo json_encode($response);
 
 
