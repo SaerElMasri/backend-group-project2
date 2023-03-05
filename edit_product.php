@@ -17,9 +17,9 @@ $row = $result -> fetch_assoc();
 $response = [];
 if(!empty($row)){
     $sql = "UPDATE products set name =?,description=?,price=?,category=?,image_url=? WHERE id=?";
-    $statement = $conn->prepare($sql);
-    $statement->bind_param('ssissi', $name,$description,$price,$category,$image_url,$id);
-    $statement->execute();
+    $query = $conn->prepare($sql);
+    $query->bind_param('ssissi', $name,$description,$price,$category,$image_url,$id);
+    $query->execute();
     $response['status'] = "Product Updated";
     $response['prod_id'] = $id;
     $response['name'] = $name;

@@ -15,9 +15,9 @@ $row = $result -> fetch_assoc();
 $response = [];
 if(!empty($row)){
     $sql = "UPDATE users set first_name =?,last_name=?,email=? WHERE id=?";
-    $statement = $conn->prepare($sql);
-    $statement->bind_param('sssi', $first_name,$last_name,$email,$id);
-    $statement->execute();
+    $query = $conn->prepare($sql);
+    $query->bind_param('sssi', $first_name,$last_name,$email,$id);
+    $query->execute();
     $response['status'] = "Profile Changed";
     $response['user_id'] = $id;
     $response['first_name'] = $first_name;
