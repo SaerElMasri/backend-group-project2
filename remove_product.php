@@ -13,13 +13,4 @@ $query->execute();
 $response=[];
 $response['status'] = "Product has been deleted";
 echo json_encode($response);
-
-
-
-
-
-
-
-
-
 ?>
