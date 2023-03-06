@@ -2,7 +2,7 @@
 
 include('connect.php');
 
-$id=$_POST['id'];
+$id=$_GET['id'];
 
 $query = $conn->prepare('SELECT * FROM products WHERE id=?');
 $query->bind_param('i', $id);
