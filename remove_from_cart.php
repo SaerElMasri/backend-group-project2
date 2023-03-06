@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 include('connect.php');
 $id = $_POST["id"];
 $query = $conn->prepare('SELECT id FROM shopping_cart WHERE id = ?');

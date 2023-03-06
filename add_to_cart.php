@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 include('connect.php');
 $name = $_POST['prod_name'];
 $description = $_POST['prod_description'];
